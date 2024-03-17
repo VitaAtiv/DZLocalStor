@@ -1,0 +1,15 @@
+export const values = [
+  { id: 1, name: "HTML" },
+  { id: 2, name: "CSS" },
+  { id: 3, name: "JavaScript" },
+  { id: 4, name: "Node.js" },
+  { id: 5, name: "React" },
+  { id: 6, name: "Vue" },
+  { id: 7, name: "Next.js" },
+  { id: 8, name: "Mobx" },
+  { id: 9, name: "Redux" },
+  { id: 10, name: "React Router" },
+  { id: 11, name: "GraphQl" },
+  { id: 12, name: "PostgreQl" },
+  { id: 13, name: "MongoDB" },
+];
