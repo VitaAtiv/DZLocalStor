@@ -3,8 +3,7 @@ import { values } from "./refs.js";
 
 const listEl = document.querySelector("#list")
 
-document.addEventListener("DOMContentLoaded", function () {
-  
+ 
 
   const buttonsContainer = document.querySelector("#list");
 
@@ -26,17 +25,27 @@ document.addEventListener("DOMContentLoaded", function () {
 
   buttonsContainer.innerHTML = buttons.join("");
 
-  listEl.addEventListener("clikc", () => {
-       if (button.classList.contains("selected")) {
-        button.classList.remove("selected");
-       const index = selectedButtons.indexOf(value.id);
+  listEl.addEventListener("clikc", (e) => {
+    const btn = e.target;
+    if (btn.tagName !== "BUTTON") {
+      return;
+    }
+    const selectedButtons =
+      JSON.parse(localStorage.getItem("name-buttons")) || [];  
+    const idx = Number(btn.dataset.id);
+    if (btn.classList.contains("selected")) {
+        btn.classList.remove("selected");
+ 
+      
+       const index = selectedButtons.indexOf(idx);
         if (index > -1) {
           selectedButtons.splice(index, 1);
         }
       } else {
-        button.classList.add("selected");
-             selectedButtons.push(value.id);
+        btn.classList.add("selected");
+             selectedButtons.push(idx);
       }
       localStorage.setItem("name-buttons", JSON.stringify(selectedButtons));
-    }); 
-  });
+   
+}); 
+
