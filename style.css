@@ -32,3 +32,9 @@ img {
 .selected {
     background-color: rgb(141, 188, 164);
   }
+
+  #list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+  }
