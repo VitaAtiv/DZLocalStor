@@ -25,7 +25,7 @@ const listEl = document.querySelector("#list")
 
   buttonsContainer.innerHTML = buttons.join("");
 
-  listEl.addEventListener("clikc", (e) => {
+  listEl.addEventListener("click", (e) => {
     const btn = e.target;
     if (btn.tagName !== "BUTTON") {
       return;
@@ -48,4 +48,6 @@ const listEl = document.querySelector("#list")
       localStorage.setItem("name-buttons", JSON.stringify(selectedButtons));
    
 }); 
+
+
 
